@@ -1,0 +1,105 @@
+// Application color pallette //
+$springWood: #f9f8f4 !default;
+$shadyLady: #b0aeaf !default;
+$charade: #1d1d27 !default;
+$pictonBlue: #51ade4 !default;
+$saharaSand: #f1f186 !default;
+$spectra: #315154 !default;
+$osloGray: #97999a !default;
+$cloud: #00AEFF !default;
+$ash: #4F4F4F !default;
+$fade: #e4f0fa !default;
+$leaveGreen: #8cef02 !default;
+$lime: #6bd1228f !default;
+
+// App Color Pallete
+$app-color: () !default;
+$app-color: map-merge(("springWood": $springWood,
+"shadyLady": $shadyLady,
+"charade": $charade,
+"pictonBlue": $pictonBlue,
+"saharaSand": $saharaSand,
+"spectra": $spectra,
+"osloGray": $osloGray,
+"cloud": $cloud,
+"ash": $ash,
+"fade": $fade,
+"leaveGreen": $leaveGreen,
+"lime": $lime,
+), $app-color);
+
+/*------------------------------------*\
+	App Color Palette
+\*------------------------------------*/
+@each $color_name,
+$color in $app-color {
+    .#{$color_name} {
+        color: $color !important;
+    }
+
+    .#{$color_name}-bg {
+        background-color: $color !important;
+    }
+}
+
+/*------------------------------------*\
+	Social Brand Color Palette
+\*------------------------------------*/
+$facebook_color : hsla(222, 47%, 40%, 1); // #365397
+$twitter_color : hsla(198, 100%, 47%, 1); // #00a9f1
+$linkedin_color : hsla(203, 100%, 35%, 1); // #006db3
+$apple_color : hsla(0, 0%, 45%, 1); // #737373
+$google_color : hsla(217, 89%, 61%, 1); // #4285f4
+$google_plus_color : hsla(8, 74%, 53%, 1); // #e0452c
+$youtube_color : hsla(0, 100%, 60%, 1); // #ff3333
+$vimeo_color : hsla(200, 82%, 61%, 1); // #48b6ed
+$pinterest_color : hsla(0, 78%, 45%, 1); // #ce1a19
+$yelp_color : hsla(5, 100%, 38%, 1); // #c30f00
+$dribbble_color : hsla(338, 82%, 60%, 1); // #ed4584
+$amazon_color : hsla(36, 100%, 50%, 1); // #ff9700
+$ebay_color : hsla(219, 89%, 30%, 1); // #083790
+$skype_color : hsla(198, 100%, 48%, 1); // #00acf4
+$instagram_color : hsla(208, 46%, 41%, 1); // #396d9a
+$dropbox_color : hsla(206, 89%, 46%, 1); // #0d84de
+$flickr_color : hsla(334, 100%, 46%, 1); // #ea0066
+$github_color : hsla(0, 0%, 18%, 1); // #2f2f2f
+$basecamp_color : hsla(121, 38%, 58%, 1); // #6bbd6d
+$tumblr_color : hsla(210, 37%, 30%, 1); // #304c68
+$foursquare_color : hsla(206, 72%, 45%, 1); // #207dc5
+$box_color : hsla(204, 83%, 40%, 1); // #1277bc
+
+$social-color: () !default;
+$social-color: map-merge(("facebook": $facebook_color,
+"twitter": $twitter_color,
+"linkedin": $linkedin_color,
+"apple": $apple_color,
+"google": $google_color,
+"google-plus": $google_plus_color,
+"youtube": $youtube_color,
+"vimeo": $vimeo_color,
+"pinterest": $pinterest_color,
+"yelp": $yelp_color,
+"dribble": $dribbble_color,
+"amazon": $amazon_color,
+"ebay": $ebay_color,
+"skype": $skype_color,
+"instagram": $instagram_color,
+"dropbox": $dropbox_color,
+"flickr": $flickr_color,
+"github": $github_color,
+"basecamp": $basecamp_color,
+"tumblr": $tumblr_color,
+"foursquare": $foursquare_color,
+"box": $box_color,
+), $social-color);
+
+@each $color_name,
+$color in $social-color {
+    .#{$color_name} {
+        color: $color !important;
+    }
+
+    .#{$color_name}-bg {
+        background-color: $color !important;
+    }
+}
