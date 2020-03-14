@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Active Users - DevCone</title>
+  <title>Create Post - DevCone</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta content="" name="keywords">
@@ -286,23 +286,26 @@
                                 </div>
                             </div>
 
-                            <div class="create-post-container mt-4">
+                            <div class="create-post-container mt-2">
                                 <div class="container-fluid">
-                                    
+                                    <div class="alert alert-danger alert-dismiss py-2 font-11-5 post-alert d-none">
+                                        <span class="post-alert-msg"></span>
+                                        <a href="javascript: void(0)" data-dismiss="alert" class="close" style="position:relative; top: -5px;">&times;</a>
+                                    </div>
                                     <form action="">
                                         <div class="row">
                                             <div class="col-sm-12 col-md-8">
                                                 <div class="post-title">
-                                                    <div class="form-group white px-2 py-3 rounded-5 z-depth-1">
+                                                    <div class="form-group white p-2 rounded-5 z-depth-1">
                                                         <label for="" class="blue-grey-text">Post Title</label>
                                                         <input type="text" name="post-title" class="form-control" placeholder="Post Title">
                                                     </div>
                                                 </div>
 
                                                 <div class="featured-image">
-                                                    <div class="form-group white px-2 py-3 rounded-5 z-depth-1">
+                                                    <div class="form-group white p-2 rounded-5 z-depth-1">
                                                         <label for="" class="blue-grey-text">Featured Image</label>
-                                                        <input type="file" name="featured-image" class="d-none featured-img">
+                                                        <input type="file" name="featured-image" class="d-none featured-img-input">
                                                         <div class="featured-image-box">
                                                             <img src="static/assets/her.jpg" class="display-featured-img" alt="">
                                                             <div class="upload-icon z-depth-1 pointer p-2 font-11 rounded-10">  <i class="fas fa-upload"></i> Click to Upload</div>
@@ -310,7 +313,7 @@
                                                     </div>
                                                 </div> 
 
-                                                
+
 
                                             </div>
 

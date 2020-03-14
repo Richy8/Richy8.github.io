@@ -176,6 +176,56 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         
     })
 
+      
+    /* HANDLE CLICK OF USER ROLE
+    ===============================*/
+    let role = $('.modal .new-user .role');
+    $(role).on('click', function () {
+        $(role).removeClass('active-role');
+        $('.input-role').val(false);
+
+        $(this).children('input').val(true);
+        $(this).addClass('active-role');
+    });
+
+    let edit_role = $('.modal .edit-role .role');
+    $(edit_role).on('click', function () {
+        $(edit_role).removeClass('active-role');
+        $('.user-input-role').val(false);
+
+        $(this).children('input').val(true);
+        $(this).addClass('active-role');
+    });
+
+
+     /* HANDLE UPLOAD OF FEATURED IMAGE
+    =====================================*/
+    $('.upload-icon').on('click', function () {
+        $('.featured-img-input').trigger('click');
+        $('.featured-img-input').on('change', function(e) {
+
+            let image_file = e.target.files;
+            let image_name = e.target.files[0].name;
+            let image_size = e.target.files[0].size;
+
+            if (image_file && image_file[0] && image_name.match(/\.(jpg|jpeg)$/)){
+                if (image_size < 1200000) {
+                    let reader = new FileReader();
+                    reader.onload = evt => {
+                        $('.display-featured-img').attr('src', evt.target.result);
+                    }
+                    reader.readAsDataURL(image_file[0]);
+                }else {
+                    $('.post-alert').removeClass('d-none');
+                    $('.post-alert-msg').text('Upload image less than 1.2mb');
+                }
+            }else{
+                $('.post-alert').removeClass('d-none');
+                $('.post-alert-msg').text('Upload jpg or jpeg files only');
+            }
+        })
+    })
+
 })(jQuery);
 (function ($) {
     "use strict"
@@ -307,27 +357,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
             $search.removeClass('box-shadow');
         }
     })
-
-     
-    /* HANDLE CLICK OF USER ROLE
-    ===============================*/
-    let role = $('.modal .new-user .role');
-    $(role).on('click', function () {
-        $(role).removeClass('active-role');
-        $('.input-role').val(false);
-
-        $(this).children('input').val(true);
-        $(this).addClass('active-role');
-    });
-
-    let edit_role = $('.modal .edit-role .role');
-    $(edit_role).on('click', function () {
-        $(edit_role).removeClass('active-role');
-        $('.user-input-role').val(false);
-
-        $(this).children('input').val(true);
-        $(this).addClass('active-role');
-    });
 
 
 })(jQuery);
