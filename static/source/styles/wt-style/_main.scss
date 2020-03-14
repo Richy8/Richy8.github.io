@@ -605,11 +605,11 @@ header {
 /* SKILLS SECTION */
 
 .skills-section {
-    margin-top: 60px;
+    margin-top: 40px;
     .skills-wrapper {
         padding: 5px 20px;
-        color: rgb(16, 17, 20); ;
-        font-size: 15px;
+        color: $spectra;
+        font-size: 14.5px;
         line-height: 26.5px;
 
         .col-12 {
@@ -1414,7 +1414,7 @@ header {
 }
 
 .business-solution-section {
-    margin-top: 30px;
+    margin-top: 40px;
     .business-solution-wrapper {
         padding: 5px 30px;
         color: rgb(16, 17, 20); ;
@@ -1583,6 +1583,9 @@ header {
                 color: $spectra;
                 line-height: 26px;
             }
+            .mobile-post-excerpt {
+                display: none;
+            }
             .post-link {
                 margin-top: 10px;
                 font-weight: 500;
@@ -1610,10 +1613,9 @@ header {
     }
 
     .author-details {
-            .top {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+        .top {
+            .left {
+                width: 25%;
                 .img-block {
                     width: 100px;
                     height: 100px;
@@ -1626,22 +1628,43 @@ header {
                         object-fit: cover;
                     }
                 }
-            }
-            .middle {
-                font-size: 20px;
-                font-weight: 600;
-            }
-            .bottom {
-                margin-top: 10px;
+            }     
+            .right {
+                width: 75%;
                 h4 {
-                    font-size: 14px;
-                }
-                p {
                     font-size: 15px;
-                    line-height: 25px;
-                    color: rgb(93, 91, 91);
+                }
+                h3 {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                ul {
+                    li {
+                        min-width: 30px;
+                        min-height: 30px;
+                        border-radius: 50%;
+                        padding: 2px;
+                        position: relative;
+                        a {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            color: #fff;
+                            font-size: 13px;
+                        }
+                    }
                 }
             }
+        }
+        .bottom {
+            margin-top: 5px;
+            p {
+                font-size: 15px;
+                line-height: 25px;
+                color: rgb(93, 91, 91);
+            }
+        }
     }
 
     .right-nav {
@@ -1741,9 +1764,11 @@ header {
             }
         }
         .policy-details {
+
             p {
-                font-size: 15.5px;
-                line-height: 30px;
+                font-size: 15px;
+                line-height: 28px;
+                color: rgb(26, 26, 34);
             }
             h4 {
                 font-weight: 600;
@@ -1753,3 +1778,55 @@ header {
         }
     }
 }
+
+/* LOGIN PAGE STYLING */
+
+html,
+body,
+.full-page {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.full-page {
+    .full-page-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right:0;
+        bottom: 0;
+
+        .form-box {
+            .icon-row {
+                position: relative;
+                .icon-holder {
+                    min-width: 55px;
+                    min-height: 55px;
+                    width: 55px;
+                    height: 55px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+            .help-block {
+                font-size: 15px;
+                border-bottom: 1px solid rgba(113, 113, 119, 0.3);
+                padding-bottom: 5px;
+            }
+            .alert {
+                position: relative;
+                .close {
+                    position: absolute;
+                    font-size: 19px;
+                    top: 5px;
+                    right: 10px;
+                }
+            }
+        }
+    }
+}
+

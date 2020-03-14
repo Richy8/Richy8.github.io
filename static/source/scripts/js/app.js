@@ -16,10 +16,10 @@
 
     /* PRELOADER
    ===================*/
-   let $window = $(window);
-   $window.on('load', function () {
-       $('#preloader').fadeOut('slow', () =>  $(this).remove());
-   });
+//    let $window = $(window);
+//    $window.on('load', function () {
+//        $('#preloader').fadeOut('fast', () =>  $(this).remove());
+//    });
 
   
     /*  HANDLE VIEW OF SIDEBAR ON CLICK
@@ -51,6 +51,7 @@
 
         portfolioIsotope.isotope({ filter: $(this).data('filter') });
     });
+
 
     /* PORTFOLIO MAGNIFIC POPUP
     =============================*/
@@ -127,5 +128,27 @@
             $search.removeClass('box-shadow');
         }
     })
+
+     
+    /* HANDLE CLICK OF USER ROLE
+    ===============================*/
+    let role = $('.modal .new-user .role');
+    $(role).on('click', function () {
+        $(role).removeClass('active-role');
+        $('.input-role').val(false);
+
+        $(this).children('input').val(true);
+        $(this).addClass('active-role');
+    });
+
+    let edit_role = $('.modal .edit-role .role');
+    $(edit_role).on('click', function () {
+        $(edit_role).removeClass('active-role');
+        $('.user-input-role').val(false);
+
+        $(this).children('input').val(true);
+        $(this).addClass('active-role');
+    });
+
 
 })(jQuery);

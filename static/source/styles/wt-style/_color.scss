@@ -2,7 +2,7 @@
 $springWood: #f9f8f4 !default;
 $shadyLady: #b0aeaf !default;
 $charade: #1d1d27 !default;
-$pictonBlue: #51ade4 !default;
+$pictonBlue: #8dd3fc !default;
 $saharaSand: #f1f186 !default;
 $spectra: #315154 !default;
 $osloGray: #97999a !default;
@@ -11,6 +11,7 @@ $ash: #4F4F4F !default;
 $fade: #e4f0fa !default;
 $leaveGreen: #8cef02 !default;
 $lime: #6bd1228f !default;
+$deltaBlue: rgb(44, 46, 63) !default;
 
 // App Color Pallete
 $app-color: () !default;
@@ -26,6 +27,7 @@ $app-color: map-merge(("springWood": $springWood,
 "fade": $fade,
 "leaveGreen": $leaveGreen,
 "lime": $lime,
+'deltaBlue': $deltaBlue,
 ), $app-color);
 
 /*------------------------------------*\

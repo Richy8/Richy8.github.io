@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Active Users - DevCone</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Main Stylesheet File -->
+  <link rel="stylesheet" href="static/css/themify-icons.css">
+  <link rel="stylesheet" href="static/css/app.css">
+
+</head>
+<body class="blue-grey lighten-5">
+
+    <!-- DASHBOARD HEADER -->
+    <header class="fixed-top scrolling-navbar dashboard-page">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- HEADER LEFT -->
+                <div class="col-md-2 header-left side-top deltaBlue-bg white-text z-depth-1">
+                    <div class="d-flex justify-content-between align-items-center px-2 px-md-3 py-25">
+                        <!-- Menu Bar -->
+                        <div class="d-md-none">
+                            <i class="fas fa-bars pointer" id="menuIcon"></i>
+                        </div>
+
+                        <!-- Dashboard -->
+                        <div class="navbar-brand font-smaller">
+                           <div class="site-info d-flex justify-content-center align-items-center">
+                               <div class="site-logo mr-2">
+                                   <img src="static/assets/favicon.png" alt="logo">
+                               </div>
+                               <div class="site-text font-weight-bold font-smaller-mid">DevCone</div>
+                               <div class="site-abbr font-weight-bold d-none">DC</div>
+                           </div>
+                        </div>
+
+                        <!-- Ellipsis -->
+                        <div class="d-md-none">
+                            <i class="fas fa-ellipsis-v pointer" id="ellipsisIcon"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- HEADER LEFT -->
+
+                <!-- HEADER RIGHT -->
+                <div class="col-md-10 blue-grey lighten-5 header-right d-none d-md-block z-depth-1 py-2 py-md-2 px-3 px-md-4 index-99">
+                    <div class="d-flex justify-content-between align-items-center w-100 h-100">
+
+                        <!-- HEADER RIGHT 1 -->
+                        <div class="left-head d-flex justify-content-start align-items-center">
+                            <strong class="font-small blue-grey-text mr-2 mr-md-5 position-relative">
+                                <i class="fas fa-home mr-1" style="font-size: 1rem;"></i>
+                                <span class="pointer dashboard-notify">
+                                    Dashboard
+                                    <i class="fas fa-caret-down ml-1 pointer font-smallest"></i>
+                                </span> 
+
+                                <!-- Dropdown Bar -->
+                                <div class="dashboard-bar">
+                                    <div class="dashboard-inner-bar white blue-grey-text z-depth-1">
+                                        <a href="" class="font-11-5 d-block mb-1 pt-1 border-bottom pb-1" target="_blank"> <i class="fas fa-globe mr-1"></i> View Site</a>
+                                        <a href="" class="font-11-5 d-block pt-1"> <i class="fas fa-bell mr-1 text-danger"></i> Notifications</a>
+                                    </div>
+                                </div>
+                            </strong>
+
+                            <!-- SEARCH -->
+                            <div class="search-bar d-none d-md-block">
+                                <form action="" class="form-inline">
+                                    <div class="form-frame">
+                                        <i class="fas fa-search"></i>
+                                        <input type="text" class="form-control new-form" placeholder="Search">
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- SEARCH -->
+
+                        </div>
+
+                        <!-- HEADER RIGHT 2 -->
+                        <div class="right-head float-right">
+                            <div class="d-flex justify-content-around align-items-center">
+                
+                                <div class="notification mr-2">
+                                    <span class="position-relative mr-1"><i class="fas fa-bell font-smaller-mid blue-grey-text pointer"></i> 
+                                        <div class="badge badge-danger badge-pill pill font-smallest position-absolute pointer user-notification">2</div> 
+                                    </span> 
+                                    <div class="notification-bar">
+                                        <div class="notification-inner-bar white z-depth-1">
+                                            <div class="blue-grey-text font-smaller-mid font-weight-bold text-center pb-2 select-none">Notifications</div>
+                                            <!-- Notifications -->
+                                            <a href="" class="notify-link">
+                                                <div class="notify d-flex justify-content-center align-items-center py-1 px-1 border grey lighten-5">
+                                                    <div class="photo border mr-2">
+                                                        <img src="static/assets/avatar.png" alt="avatar">
+                                                    </div>
+                                                    <div class="request d-flex flex-column ash">
+                                                        <div class="request-info font-11-5"><span class="font-weight-bold">Richy Jones</span> sent a delete request</div>
+                                                        <div class="time-stamp font-smallest">2 hours ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+    
+                                            <a href="" class="notify-link">
+                                                <div class="notify d-flex justify-content-center align-items-center py-1 px-1 border grey lighten-5">
+                                                    <div class="photo border mr-2">
+                                                        <img src="static/assets/avatar.png" alt="avatar">
+                                                    </div>
+                                                    <div class="request d-flex flex-column ash">
+                                                        <div class="request-info font-11"><span class="font-weight-bold">Richy Jones</span> sent a delete request</div>
+                                                        <div class="time-stamp font-smallest">2 hours ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <!-- View All -->
+                                            <div class="all-notications text-center mt-1 font-11-5"><a href="" class="blue-text">View all <i class="fas fa-angle-double-right"></i> </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="profile mr-2">
+                                    <span class="font-smaller-mid blue-grey-text pointer font-weight-bold user-name">Efemena Elvis <i class="fas fa-caret-down font-smallest"></i> </span>
+                                    <div class="profile-bar">
+                                        <div class="inner-profile-bar white text-center z-depth-1">
+                                            <div class="view-profile border-bottom pb-1"> <a href=""><i class="fas fa-user mr-2 mb-1"></i> Profile</div></a> 
+                                            <div class="logout pt-1"> <a href=""><i class="fas fa-power-off mr-2 red-text"></i> Logout</div></a> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile-pic teal lighten-2 z-depth-1 pointer mx-2" data-toggle="modal" data-target="#profilePhoto">   
+                                    <img src="static/assets/avatar.png" alt="avatar">
+                                </div>
+
+                            </div>
+                           
+                        </div>
+                         <!-- HEADER RIGHT 2 -->
+                    </div>
+
+                </div>
+                <!-- HEADER RIGHT -->
+
+            </div>
+        </div>
+    </header>
+
+    <!-- BODY -->
+    <section>
+        <div class="body-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2 sidebar-section deltaBlue-bg white-text d-none d-md-block z-depth-1">
+                        <div class="sidebar-wrapper">
+
+                            <!-- PROFILE PICTURE -->
+                            <div class="profile d-flex justify-content-center align-items-center flex-wrap pt-25">
+                                <div class="profile-wrapper rounded-circle mr-3">
+                                    <div class="profile-pic z-depth-1 white mb-2">
+                                        <img src="static/assets/avatar.png" alt="avatar">
+                                    </div>
+                                </div>
+                                <div class="profile-info">
+                                    <div class="profile-name font-smaller-mid font-weight-bold">Jane Doe Smith</div>
+                                    <div class="profile-role pictonBlue font-11">Administrator</div>
+                                </div>
+                            </div>
+                            <!-- PROFILE PICTURE -->
+
+                            <!-- SIDEBAR NAV -->
+                            <ul class="sidebar-navigation list-unstyled white-text">
+                                <li class="py-1 mb-1 px-2 pl-3 current-nav-link">
+                                    <a href="admin_dashboard.html" class="white-text font-11-5">
+                                        <i class="fas fa-tachometer-alt mr-3"></i> 
+                                        Overview
+                                    </a> 
+                                </li>
+
+                                <li class="py-1 mb-1 px-2 pl-3">
+                                    <a href="admin_users.html" class="white-text font-11-5">
+                                        <i class="fas fa-users mr-3"></i> 
+                                        Users
+                                    </a> 
+                                </li>
+
+                                <li class="py-1 mb-1 px-2 pl-3">
+                                    <a href="javascript: void(0)" class="white-text font-11-5">
+                                        <i class="fas fa-edit mr-3"></i> 
+                                        Posts
+                                    </a> 
+                                    <i class="caret-icon fas fa-angle-up font-10-5"></i>
+                                    <div class="dropdown-nav">
+                                        <div class="nav-link"> 
+                                            <a href="new_post.html"> 
+                                                <i class="fas fa-plus mr-3"></i> 
+                                                Add New
+                                            </a>  
+                                        </div>
+
+                                        <div class="nav-link"> 
+                                            <a href="view_post.html"> 
+                                                <i class="fas fa-book-open mr-3"></i> 
+                                                View Posts
+                                            </a>  
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="py-1 mb-1 px-2 pl-3">
+                                    <a href="admin_portfolio.html" class="white-text font-11-5">
+                                        <i class="fas fa-project-diagram mr-3"></i> 
+                                        Portfolio
+                                    </a> 
+                                </li>
+
+                                <li class="py-1 mb-1 px-2 pl-3">
+                                    <a href="javascript: void(0)" class="white-text font-11-5">
+                                        <i class="fas fa-user-friends mr-3"></i> 
+                                        Clients
+                                    </a> 
+                                    <i class="caret-icon fas fa-angle-up font-10-5"></i>
+                                    <div class="dropdown-nav">
+                                        <div class="nav-link"> 
+                                            <a href="admin_brand_icons.html"> 
+                                                <i class="fas fa-images mr-3"></i> 
+                                                Brand Icons
+                                            </a>  
+                                        </div>
+
+                                        <div class="nav-link"> 
+                                            <a href="admin_testimonials.html"> 
+                                                <i class="fas fa-comment-alt mr-3"></i> 
+                                                Testimonials
+                                            </a>  
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="py-1 mb-1 px-2 pl-3">
+                                    <a href="admin_notifications.html" class="white-text font-11-5">
+                                        <i class="fas fa-bell mr-3"></i> 
+                                        Notifications
+                                    </a> 
+                                </li>
+
+                                <li class="py-1 mb-1 px-2 pl-3">
+                                    <a href="admin_subscribers.html" class="white-text font-11-5">
+                                        <i class="fas fa-envelope mr-3"></i> 
+                                        Subscribers
+                                    </a> 
+                                </li>
+                            
+                            </ul>
+                            <!-- SIDEBAR NAV -->
+
+                            <!-- FOOTER -->
+                            <div class="side-footer w-100">
+                                <div class="footer-info font-11 white-text text-center w-100">&copy; 2020 DevCanyon. All Rights Reserved</div>
+                            </div>
+                            <!-- FOOTER -->
+                        </div>
+                    </div>
+
+                    <!-- CONTENT -->
+                    <div class="col-md-10 content offset-md-2">
+                        <div class="content-box font-small p-2 mt-1">
+
+                            <div class="dashboard-first-row">
+                                <div class="container-fluid">
+
+                                    <div class="row row-title">
+                                        <div class="col-12 d-flex justify-content-between align-items-center">
+                                            <div class="title font-weight-600 blue-grey-text mb-2"> <i class="fas fa-users"></i> Users</div>
+                                            <button class="btn btn-sm blue-grey darken-2 white-ic rounded-20 z-depth-0" data-toggle="modal" data-target="#newUser"> <i class="fas fa-plus mr-1"></i> Add New</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="dashboard-second-row mt-3">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div class="column column-one mx-2 dashboard-active-tab"> <a href="admin_users.html">Active (5)</a> </div>
+                                    <div class="column column-two mx-2"> <a href="admin_pending_users.html">Pending (2)</a> </div>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-third-row mt-3">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="third-row">
+                                            <table class="table table-responsive-lg">
+                                                <thead>
+                                                    <th class="text-left font-smallest font-weight-bold">S/N</th>
+                                                    <th class="text-left font-smallest font-weight-bold" style="min-width: 180px; width: 250px;">USER</th>
+                                                    <th class="text-center font-smallest font-weight-bold" style="min-width: 100px; width: 200px;">ROLE</th>
+                                                    <th class="text-center font-smallest font-weight-bold" style="min-width: 70px; width: 200px;">POSTS</th>
+                                                    <th class="text-center font-smallest font-weight-bold" style="min-width: 70px; width: 200px;">STATUS</th>
+                                                    <th class="text-center font-smallest font-weight-bold" style="min-width: 80px; width: 250px;">ACTION</th>
+                                                </thead>
+                                                <tbody>
+                                        
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td class="text-left">
+                                                            <div class="basic-info d-flex justify-content-start align-items-center">
+                                                                <div class="img-block mr-2">
+                                                                    <img src="static/assets/team-2.jpg" alt="">
+                                                                </div>
+                                                                <div class="info d-flex flex-column justify-content-start">
+                                                                    <div class="name">Efemena Elvis</div>
+                                                                    <div class="email">menaelvisjones@gmail.com</div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center">Administrator</td>
+                                                        <td class="text-center">45</td>
+                                                        <td class="text-center"> 
+                                                            <span class="green-text green lighten-4 px-3 py-2 rounded-20 font-10-5 font-weight-600">Active</span>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <div class="d-flex justify-content-center align-items-center deltaBlue">
+                                                                <div class="icon pointer blue lighten-4 hint--bottom hint--info" aria-label="View">
+                                                                    <a href=""><i class="fas fa-eye blue-text"></i></a> 
+                                                                </div>
+                                                                <div class="icon pointer mx-2 orange lighten-4  hint--bottom hint--warning" aria-label="Edit" data-toggle="modal" data-target="#editRole"> 
+                                                                    <i class="fas fa-edit orange-text"></i>
+                                                                </div>
+                                                                <div class="icon pointer red lighten-4  hint--bottom hint--error" aria-label="Delete" data-toggle="modal" data-target="#disableUser"> 
+                                                                    <i class="fas fa-trash red-text"></i>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <!-- 
+                                                        <tr>
+                                                            <td colspan="5" class="font-small text-center font-weight-400">No User Data Found</td>
+                                                        </tr> 
+                                                    -->
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CONTENT -->
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BODY -->
+    
+    
+    
+    <!-- NEW USER -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-2">
+                <div class="modal fade top" id="newUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true" data-backdrop="true">
+                    <div class="modal-dialog modal-right modal-side modal-top-right modal-notify" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header white border grey lighten-5 z-depth-0">
+    
+                                <div class="d-flex justify-content-start align-items-center photo-modal">
+                                    <div class="modal-title blue-grey-text">
+                                        <div class="h6-responsive font-weight-400"> <i class="fas fa-user mr-2"></i> User Invitation</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="close blue-grey-text" data-dismiss="modal">&times;</a>
+    
+                            </div>
+                            <div class="modal-body blue-grey lighten-5 new-user">
+
+                                <span class="d-block font-12 blue-grey-text font-weight-500 mb-2">Enter new user email and select user role before sending invitation</span>
+
+                                <form action="" method="post" class="form-box mt-2">
+                                    <input type="hidden" name="check" value="">
+
+                                    <div class="form-group">
+                                        <input type="email" name="user_email" required class="form-control font-12 " placeholder="User Email">
+                                    </div>
+
+                                    <span class="d-block font-12 font-weight-500 blue-grey-text mt-3">Select User role below</span>
+
+                                    <div class="user-role w-100 d-flex justify-content-around align-items-center">
+                                        <div class="role">
+                                           <input type="hidden" name="admin" class="input-role" value="false">
+                                           <span>Admin</span>
+                                        </div>
+                                        <div class="role">
+                                           <input type="hidden" name="moderator" class="input-role" value="false">
+                                           <span>Moderator</span>
+                                        </div>
+                                        <div class="role">
+                                           <input type="hidden" name="author" class="input-role" value="false">
+                                           <span>Author</span>
+                                        </div>
+                                    </div>
+    
+                            </div>
+                            <div class="modal-footer grey lighten-5 z-depth-0 border">
+                                <button type="button" class="btn btn-sm ash close font-11 z-depth-0" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-sm blue-grey darken-2 white-ic rounded-20 z-depth-0">Invite <i class="fas fa-paper-plane ml-1"></i> </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- NEW USER -->
+
+
+    <!-- EDIT USER ROLE -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-2">
+                <div class="modal fade top" id="editRole" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true" data-backdrop="true">
+                    <div class="modal-dialog modal-right modal-side modal-top-right modal-notify" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header white border grey lighten-5 z-depth-0">
+    
+                                <div class="d-flex justify-content-start align-items-center photo-modal">
+                                    <div class="modal-title blue-grey-text">
+                                        <div class="h6-responsive font-weight-400"> <i class="fas fa-user mr-2"></i> Edit User Role</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="close blue-grey-text" data-dismiss="modal">&times;</a>
+    
+                            </div>
+                            <div class="modal-body blue-grey lighten-5 edit-role">
+
+                                <span class="d-block font-12 font-weight-500 blue-grey-text mt-3">Select new User role below</span>
+
+                                <form action="" method="post" class="form-box mt-2">
+                                    <input type="hidden" name="check" value="">
+
+                                    <div class="user-role">
+                                        <div class="role">
+                                            <input type="hidden" name="admin" class="user-input-role" value="false">
+                                            <span>Admin</span>
+                                        </div>
+                                        <div class="role">
+                                            <input type="hidden" name="moderator" class="user-input-role" value="false">
+                                            <span>Moderator</span>
+                                        </div>
+                                        <div class="role">
+                                            <input type="hidden" name="author" class="user-input-role" value="false">
+                                            <span>Author</span>
+                                        </div>
+                                    </div>
+    
+                            </div>
+                            <div class="modal-footer grey lighten-5 z-depth-0 border">
+                                <button type="button" class="btn btn-sm ash close font-11 z-depth-0" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-sm blue-grey darken-2 white-ic rounded-20 z-depth-0">Update <i class="fas fa-paper-plane ml-1"></i> </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EDIT USER ROLE -->
+
+
+    <!-- DISABLE USER -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-2">
+                <div class="modal fade top" id="disableUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true" data-backdrop="true">
+                    <div class="modal-dialog modal-right modal-side modal-bottom-right modal-notify" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header white border grey lighten-5 z-depth-0">
+    
+                                <div class="d-flex justify-content-start align-items-center photo-modal">
+                                    <div class="modal-title blue-grey-text">
+                                        <div class="h6-responsive font-weight-400"> <i class="fas fa-user-alt-slash mr-2"></i> Disable User</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="close blue-grey-text" data-dismiss="modal">&times;</a>
+    
+                            </div>
+                            <div class="modal-body blue-grey lighten-5 edit-role">
+
+                                <span class="d-block font-12 font-weight-500 blue-grey-text mt-3">Enter password to disable user</span>
+
+                                <form action="" method="post" class="form-box mt-2">
+                                    <input type="hidden" name="check" value="">
+
+                                    <div class="form-group">
+                                        <input type="password" name="user_password" required class="form-control font-12 " placeholder="Password">
+                                    </div>
+    
+                            </div>
+                            <div class="modal-footer grey lighten-5 z-depth-0 border">
+                                <button type="button" class="btn btn-sm ash close font-11 z-depth-0" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-sm blue-grey darken-2 white-ic rounded-20 z-depth-0">Disable</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- DISABLE USER -->
+
+
+    <script src="static/js/app.js"></script>
+</body>
+</html>

@@ -7,8 +7,15 @@
 /*Helper Style*/
 @import 'helper';
 
+/*Dashboard Style*/
+@import 'dashboard';
+
 /*Home Style*/
 @import 'main';
 
 /*Media Queries*/
-@import 'mediaquery'
+@import 'dashboard_mediaquery';
+
+/*Media Queries*/
+@import 'mediaquery';
+

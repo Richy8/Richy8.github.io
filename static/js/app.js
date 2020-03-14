@@ -88,6 +88,98 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 (function ($) {
     "use strict"
 
+    /*++++++++++++++++++++++++++
+     * PROFILE BAR
+     +++++++++++++++++++++++++++*/
+    const $dropdown = $('.profile-bar');
+
+    $(document).on('mouseup', function(e){
+        if(e.target.classList.contains('user-name')){
+        //    console.log('pass');
+        }
+        else if(!e.target.classList.contains('user-name') 
+        && !e.target.parentElement.parentElement.classList.contains('profile-bar')
+        && !e.target.parentElement.classList.contains('profile-bar')){
+            $dropdown.removeClass('d-block');
+        }
+    })
+
+    $('.user-name').on('click', function(){
+       $dropdown.toggleClass('d-block');
+    })
+
+    /*++++++++++++++++++++++++++
+    * NOTIFICATION BAR
+     +++++++++++++++++++++++++++*/
+    const $dropdown_one = $('.notification-bar');
+
+    $(document).on('mouseup', function(e){
+        if(e.target.classList.contains('user-notification')){
+        //    console.log('pass');
+        }
+        else if(!e.target.classList.contains('user-notification') 
+        && !e.target.parentElement.parentElement.classList.contains('notification-bar')
+        && !e.target.parentElement.classList.contains('notification-bar')){
+            $dropdown_one.removeClass('d-block');
+        }
+    })
+
+    $('.user-notification').on('click', function(){
+       $dropdown_one.toggleClass('d-block');
+    })
+   
+    /*++++++++++++++++++++++++++
+     * DASHBOARD NOTIFICATION BAR
+    +++++++++++++++++++++++++++*/
+    const $dropdown_two = $('.dashboard-bar');
+
+    $(document).on('mouseup', function(e){
+         if(e.target.classList.contains('dashboard-notify')){
+         //    console.log('pass');
+         }
+         else if(!e.target.classList.contains('dashboard-notify') 
+         && !e.target.parentElement.parentElement.classList.contains('dashboard-bar')
+         && !e.target.parentElement.classList.contains('dashboard-bar')){
+             $dropdown_two.removeClass('d-block');
+         }
+     })
+ 
+    $('.dashboard-notify').on('click', function(){
+        $dropdown_two.toggleClass('d-block');
+    })
+
+
+    /*++++++++++++++++++++++++++
+     * ELLIPSIS ICON
+    +++++++++++++++++++++++++++*/
+    $('#ellipsisIcon').click(() => {
+        $('.header-right').toggleClass('d-none');
+    })
+
+    /*++++++++++++++++++++++++++
+    * MENU BAR ICON
+    +++++++++++++++++++++++++++*/
+    $('#menuIcon').click(() => {
+        $('.sidebar-section').toggleClass('show');
+    })
+
+    /*++++++++++++++++++++++++++
+    * SIDEBAR DROPDOWN
+    +++++++++++++++++++++++++++*/
+    $('.sidebar-navigation li').on('click', function() {
+        if ($(this).children('.caret-icon').length) {
+            // $(this).children('.dropdown-nav').toggleClass('drop-bar');
+            $(this).toggleClass('drop-bar');
+        } else {
+            console.log('No log')
+        }
+        
+    })
+
+})(jQuery);
+(function ($) {
+    "use strict"
+
     /* Animation Effects
    ===================*/
     new WOW().init({
@@ -103,10 +195,10 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
     /* PRELOADER
    ===================*/
-   let $window = $(window);
-   $window.on('load', function () {
-       $('#preloader').fadeOut('slow', () =>  $(this).remove());
-   });
+//    let $window = $(window);
+//    $window.on('load', function () {
+//        $('#preloader').fadeOut('fast', () =>  $(this).remove());
+//    });
 
   
     /*  HANDLE VIEW OF SIDEBAR ON CLICK
@@ -138,6 +230,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
         portfolioIsotope.isotope({ filter: $(this).data('filter') });
     });
+
 
     /* PORTFOLIO MAGNIFIC POPUP
     =============================*/
@@ -215,6 +308,28 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         }
     })
 
+     
+    /* HANDLE CLICK OF USER ROLE
+    ===============================*/
+    let role = $('.modal .new-user .role');
+    $(role).on('click', function () {
+        $(role).removeClass('active-role');
+        $('.input-role').val(false);
+
+        $(this).children('input').val(true);
+        $(this).addClass('active-role');
+    });
+
+    let edit_role = $('.modal .edit-role .role');
+    $(edit_role).on('click', function () {
+        $(edit_role).removeClass('active-role');
+        $('.user-input-role').val(false);
+
+        $(this).children('input').val(true);
+        $(this).addClass('active-role');
+    });
+
+
 })(jQuery);
 /*Jquery Plugin */
 //@prepros-prepend vendors/jquery-3.3.1.min.js
@@ -254,6 +369,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 /*Croppie Plugin*/
 //@prepros-prepend vendors/croppie.min.js
+
+/*Dashboard Javascript*/
+//@prepros-prepend js/dashboard.js
 
 /*Custom Javascript*/
 //@prepros-prepend js/app.js

@@ -37,5 +37,8 @@
 /*Croppie Plugin*/
 //@prepros-prepend vendors/croppie.min.js
 
+/*Dashboard Javascript*/
+//@prepros-prepend js/dashboard.js
+
 /*Custom Javascript*/
 //@prepros-prepend js/app.js
